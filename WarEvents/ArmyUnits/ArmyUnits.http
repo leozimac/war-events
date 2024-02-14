@@ -1,0 +1,6 @@
+@ArmyUnits_HostAddress = http://localhost:5033
+
+GET {{ArmyUnits_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

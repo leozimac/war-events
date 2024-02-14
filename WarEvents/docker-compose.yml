@@ -1,0 +1,29 @@
+version: '3.4'
+
+services:
+  warcore:
+    image: ${DOCKER_REGISTRY-}warcore
+    build:
+      context: .
+      dockerfile: WarCore/Dockerfile
+
+  # armyUnits:
+  #   image : ${DOCKER_REGISTRY-}armyunits
+  #   build:
+  #     context: .
+  #     dockerfile: ArmyUnits/Dockerfile
+  #   ports:
+  #     - "5062:8080"
+  #     - "5063:8081"
+
+  rabbit:
+    image: rabbitmq:3.8-management
+    ports:
+      - "15672:15672"
+      - "5672:5672"
+
+  mongo:
+    image: mongo
+    restart: always
+    ports:
+      - "27017:27017"

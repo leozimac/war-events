@@ -1,0 +1,6 @@
+@WarCore_HostAddress = http://localhost:5294
+
+GET {{WarCore_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
